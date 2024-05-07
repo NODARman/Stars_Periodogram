@@ -13,7 +13,7 @@ def Periodogram(star_name=myStar):
   # Stitch
   lc_stitched = lc_collection.stitch()
 
-  # Plot the periodogram
+  # Shorten variables
   Per = lc_stitched.normalize(unit='ppm').to_periodogram()
   Period = Per.period.value
   Power = Per.power.value
@@ -24,8 +24,9 @@ def Periodogram(star_name=myStar):
     Period = np.delete(Period, 0)
     Power = np.delete(Power, 0)
 
+  # Plot the periodogram
   plt.plot(Period, Power, linewidth=0.5)
-  plt.title(str(myStar) +  ', ' + f'P_rot: {MaxPeriod}d')
+  plt.title(str(star_name) +  ', ' + f'P_rot: {MaxPeriod}d')
   plt.show()
 
 Periodogram()
