@@ -9,8 +9,6 @@ import lightkurve as lk
 import pandas as pd
 import numpy as np
 
-#excel = pd.read_excel('/content/McQuillan x Santos 1-2 - 89 261 stars - ცალ-ცალკე.xlsx', 'txt')
-
 # Set the star identifier
 myStar = "KIC 004041342"
 
@@ -22,10 +20,6 @@ def Periodogram(star_name=myStar, author="Kepler", quarter=10):
   lc_collection = search_result.download_all()
 
   lc_stitched = lc_collection.stitch()
-
-  # ნანების მოშორება და ახალ მასივში შეტანა
-  Time=[]
-  Flux=[]
 
   # Plot the periodogram
   Per = lc_stitched.normalize(unit='ppm').to_periodogram()
