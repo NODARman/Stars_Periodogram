@@ -8,3 +8,7 @@ How to use this code? (using Google Colab https://colab.research.google.com/ )
 5. Run the code and wait for the result.
 
 You'll need to install some libraries if you want to run it on the local machine.
+
+Example periodogram:
+
+![alt text](https://github.com/NODARman/Stars_Periodogram/blob/054c947f8844e55035a3c6b9f5b79901b38f364d/Example%20periodogram.png)
